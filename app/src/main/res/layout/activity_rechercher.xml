@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bb"
+    tools:context=".rechercher">
+
+    <TextView
+        android:id="@+id/titleRecherche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="Rechercher Client"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/SearchNom"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="160dp"
+        android:ems="15"
+        android:hint="taper le nom "
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgRech"
+        android:layout_width="0dp"
+        app:backgroundTint="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="5dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SearchNom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search_24" />
+
+    <TextView
+        android:id="@+id/txtidcl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="idClient"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchNom" />
+
+    <TextView
+        android:id="@+id/txtnomCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Nom Client"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtidcl" />
+    <TextView
+        android:id="@+id/txtemailCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Email Client"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomCl" />
+
+    <EditText
+        android:id="@+id/RechId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint=""
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@id/txtidcl"
+        app:layout_constraintStart_toEndOf="@+id/txtidcl"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <EditText
+        android:id="@+id/RechNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:hint=""
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@id/txtnomCl"
+        app:layout_constraintStart_toEndOf="@+id/txtnomCl" />
+
+    <EditText
+        android:id="@+id/RechEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:hint=""
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@id/txtemailCl"
+        app:layout_constraintStart_toEndOf="@+id/txtemailCl" />
+
+    <ImageButton
+        android:id="@+id/Rechfirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="100dp"
+
+        android:src="@drawable/ic_first_24"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtnomCl" />
+
+    <Button
+        android:id="@+id/btnValider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="vaidate"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rechfirst" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="cancel"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/btnValider"
+        app:layout_constraintTop_toBottomOf="@+id/Rechfirst" />
+
+    <ImageButton
+        android:id="@+id/Rechprevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="100dp"
+
+
+        app:layout_constraintLeft_toRightOf="@id/Rechfirst"
+        app:layout_constraintTop_toBottomOf="@id/txtnomCl"
+        app:srcCompat="@drawable/ic_left_24" />
+
+    <ImageButton
+        android:id="@+id/Rechnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@+id/Rechprevious"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomCl"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+    <ImageButton
+        android:id="@+id/Rechlast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Rechnext"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomCl"
+        app:srcCompat="@drawable/ic_last_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
